@@ -10,3 +10,12 @@
 
 1. install `typeorm` globally: `npm i -g typeorm`
 2. run `typeorm -h` to show list of available commands
+
+## Typescript Cli
+
+### To Create a Migration
+    - Create or Update an existing entity in src/entity folder
+    - npm run tsc // to clean up the dist folder
+    - npm run typeorm migration:generate -- -n Create{EntityName}Table // this would create a new migration file in `src/migration`
+    - Again run npm run tsc to clean up the dist folder
+    - `npm run typeorm migration:run` to apply the migration // this would create or update the table or columns in DB accordingly

@@ -1,21 +1,21 @@
 {
   "name": "default",
-  "type": "mysql",
+  "type": "postgres",
   "host": "localhost",
-  "port": 3306,
-  "username": "test",
-  "password": "test",
-  "database": "test",
-  "synchronize": true,
+  "port": 5432,
+  "username": "postgres",
+  "password": "****",
+  "database": "test_db",
+  "synchronize": false,
   "logging": false,
   "entities": [
-    "src/entity/*.js"
+    "dist/entity/*{.ts,.js}"
   ],
   "subscribers": [
     "src/subscriber/*.js"
   ],
   "migrations": [
-    "src/migration/*.js"
+    "dist/migration/*{.ts,.js}"
   ],
   "cli": {
     "entitiesDir": "src/entity",

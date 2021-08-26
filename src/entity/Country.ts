@@ -2,21 +2,14 @@ import {Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn} from "typ
 import {Category} from "./Category";
 
 @Entity()
-export class Post {
+export class Country {
 
     @PrimaryGeneratedColumn()
     id: number;
 
     @Column()
-    title: string;
+    code: string;
 
     @Column("text")
-    text: string;
-
-    @ManyToMany(type => Category)
-    @JoinTable()
-    categories: Category[];
-
-    @Column('varchar')
-    codeTest: string;
+    desc: string;
 }
